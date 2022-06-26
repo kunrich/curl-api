@@ -44,4 +44,4 @@ http.createServer(function(req,res){
 			}else send(res,obj);
 		})
 	}else send(res,obj);
-}).listen();
+}).listen(process.env.PORT||3000,process.env.HOST||'0.0.0.0');
