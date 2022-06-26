@@ -10,7 +10,10 @@ var send=function(res,obj){
 
 http.createServer(function(req,res){
 	let obj={status:404};
-	res.writeHead(200,{'Content-Type': 'application/json; charset=UTF-8'});
+	res.writeHead(200,{
+		'Content-Type':'application/json; charset=UTF-8',
+		'access-control-allow-origin':'*'
+	});
 	if (req.method=='POST') {
 		var body = ''
 		req.on('data',(data)=>{
